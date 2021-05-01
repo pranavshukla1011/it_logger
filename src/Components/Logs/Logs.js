@@ -1,6 +1,7 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import axios from 'axios';
 import LogItem from './LogItem';
+import Loader from '../Layout/Loader';
 const Logs = () => {
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -18,7 +19,7 @@ const Logs = () => {
   };
 
   if (loading) {
-    return <h4>Loading</h4>;
+    return <Loader></Loader>;
   }
   return (
     <Fragment>
