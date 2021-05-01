@@ -1,0 +1,47 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "CHange hard drive on workstatoin 005",
+      "attention": false,
+      "date": "03-03-2019",
+      "tech": "Sam Smith"
+    },
+    {
+      "id": 2,
+      "message": "Workstatoin 007 not posting",
+      "attention": true,
+      "date": "03-03-2019",
+      "tech": "John Doe"
+    },
+    {
+      "id": 3,
+      "message": "Changed memory on workstation 009",
+      "attention": false,
+      "date": "03-03-2020",
+      "tech": "Sara Johnson"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "Sam",
+      "lastName": "Smith"
+    },
+    {
+      "id": 2,
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": 3,
+      "firstName": "Sara",
+      "lastName": "Johnson"
+    },
+    {
+      "firstName": "Pranav",
+      "lastName": "Shukla",
+      "id": 4
+    }
+  ]
+}
