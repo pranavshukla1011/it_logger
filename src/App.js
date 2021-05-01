@@ -5,6 +5,7 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 import SearchBar from './Components/Layout/SearchBar';
 import Logs from './Components/Logs/Logs';
 import Adbtn from './Components/Layout/Adbtn';
+import AdLogModal from './Components/Logs/AdLogModal';
 const App = () => {
   useEffect(() => {
     //initializes materialize js
@@ -16,6 +17,7 @@ const App = () => {
       <div className='container'>
         <Adbtn></Adbtn>
         <Logs></Logs>
+        <AdLogModal></AdLogModal>
       </div>
     </Fragment>
   );
