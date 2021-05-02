@@ -22,8 +22,8 @@ const App = () => {
         <Adbtn></Adbtn>
         <AdLogModal></AdLogModal>
         <EditLogModal></EditLogModal>
-        <AddTechModal></AddTechModal>
         <TechListModal></TechListModal>
+        <AddTechModal></AddTechModal>
         <Logs></Logs>
       </div>
     </Fragment>
