@@ -7,6 +7,7 @@ import Logs from './Components/Logs/Logs';
 import Adbtn from './Components/Layout/Adbtn';
 import AdLogModal from './Components/Logs/AdLogModal';
 import EditLogModal from './Components/Logs/EditLogModal';
+import AddTechModal from './Components/Techs/AddTechModal';
 const App = () => {
   useEffect(() => {
     //initializes materialize js
@@ -20,6 +21,7 @@ const App = () => {
         <Logs></Logs>
         <AdLogModal></AdLogModal>
         <EditLogModal></EditLogModal>
+        <AddTechModal></AddTechModal>
       </div>
     </Fragment>
   );
