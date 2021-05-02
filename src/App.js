@@ -8,6 +8,8 @@ import Adbtn from './Components/Layout/Adbtn';
 import AdLogModal from './Components/Logs/AdLogModal';
 import EditLogModal from './Components/Logs/EditLogModal';
 import AddTechModal from './Components/Techs/AddTechModal';
+import TechListModal from './Components/Techs/TechListModal';
+
 const App = () => {
   useEffect(() => {
     //initializes materialize js
@@ -18,10 +20,11 @@ const App = () => {
       <SearchBar></SearchBar>
       <div className='container'>
         <Adbtn></Adbtn>
-        <Logs></Logs>
         <AdLogModal></AdLogModal>
         <EditLogModal></EditLogModal>
         <AddTechModal></AddTechModal>
+        <TechListModal></TechListModal>
+        <Logs></Logs>
       </div>
     </Fragment>
   );
