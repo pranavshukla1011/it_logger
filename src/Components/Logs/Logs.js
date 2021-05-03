@@ -1,26 +1,26 @@
-import React, { useState, Fragment, useEffect } from 'react';
-import axios from 'axios';
+import React, { Fragment, useEffect } from 'react';
 import LogItem from './LogItem';
 import Loader from '../Layout/Loader';
-const Logs = () => {
-  const [logs, setLogs] = useState([]);
-  const [loading, setLoading] = useState(false);
+import { getLogs } from '../../Redux/actions/logAction';
 
+//using redux
+import { useSelector, useDispatch } from 'react-redux';
+
+const Logs = () => {
+  const log = useSelector((state) => state.log);
+
+  const { loading, logs } = log;
+
+  const dispatch = useDispatch();
   useEffect(() => {
-    getLogs();
-    //eslint-disable-next-line
+    dispatch(getLogs());
+    // eslint-disable-next-line
   }, []);
 
-  const getLogs = async () => {
-    setLoading(true);
-    const res = await axios.get('/logs');
-    setLogs(res.data);
-    setLoading(false);
-  };
-
-  if (loading) {
+  if (loading || logs === null) {
     return <Loader></Loader>;
   }
+
   return (
     <Fragment>
       <ul className='collection with-header'>
