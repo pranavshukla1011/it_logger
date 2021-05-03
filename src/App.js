@@ -10,23 +10,29 @@ import EditLogModal from './Components/Logs/EditLogModal';
 import AddTechModal from './Components/Techs/AddTechModal';
 import TechListModal from './Components/Techs/TechListModal';
 
+//implementing redux
+import store from './store';
+import { Provider } from 'react-redux';
+
 const App = () => {
   useEffect(() => {
     //initializes materialize js
     M.AutoInit();
   }, []);
   return (
-    <Fragment>
-      <SearchBar></SearchBar>
-      <div className='container'>
-        <Adbtn></Adbtn>
-        <AdLogModal></AdLogModal>
-        <EditLogModal></EditLogModal>
-        <TechListModal></TechListModal>
-        <AddTechModal></AddTechModal>
-        <Logs></Logs>
-      </div>
-    </Fragment>
+    <Provider store={store}>
+      <Fragment>
+        <SearchBar></SearchBar>
+        <div className='container'>
+          <Adbtn></Adbtn>
+          <AdLogModal></AdLogModal>
+          <EditLogModal></EditLogModal>
+          <TechListModal></TechListModal>
+          <AddTechModal></AddTechModal>
+          <Logs></Logs>
+        </div>
+      </Fragment>
+    </Provider>
   );
 };
 
